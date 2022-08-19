@@ -1,5 +1,6 @@
-import 'package:expansiontile/dog_page.dart';
 import 'package:flutter/material.dart';
+import 'package:expansiontile/cat_page.dart';
+import 'package:expansiontile/dog_page.dart';
 
 main() {
   runApp(const AnimalPage());
@@ -48,7 +49,13 @@ class _ExpandState extends State<AnimalPage> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                print('cat');
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return const CatPage();
+                    },
+                  ),
+                );
               },
             ),
             ListTile(
